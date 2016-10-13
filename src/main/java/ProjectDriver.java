@@ -1,3 +1,5 @@
+import org.lightcouch.Response;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -41,9 +43,14 @@ public class ProjectDriver {
         tests.add(tbTest2);
         bovine.setTbTests(tests);
 
-        CouchCRUD.postToCouch(bovine);
+        Response response = CouchCRUD.postToCouch(bovine);
+
+//        System.out.println(response.toString());
+
+//        System.out.println(CouchCRUD.getById(response));
 
 
+        CouchCRUD.getById(response);
 
 
 

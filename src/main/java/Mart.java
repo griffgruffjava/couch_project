@@ -3,7 +3,7 @@
  */
 public class Mart {
 
-    String MartId;
+    String martId;
 
     String addressOne;
 
@@ -12,14 +12,14 @@ public class Mart {
     String phone;
 
     public Mart(String martId, String addressOne, String town, String phone) {
-        MartId = martId;
+        this.martId = martId;
         this.addressOne = addressOne;
         this.town = town;
         this.phone = phone;
     }
 
     public String getMartId() {
-        return MartId;
+        return martId;
     }
 
     public String getAddressOne() {

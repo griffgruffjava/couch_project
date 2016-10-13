@@ -11,6 +11,8 @@ public class PrivateSale implements Movement {
 
     LocalDate saleDate;
 
+    public PrivateSale(){}
+
     public PrivateSale(Herd buyer, Herd seller, LocalDate saleDate) {
         this.buyer = buyer;
         this.seller = seller;

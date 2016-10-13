@@ -1,6 +1,9 @@
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import org.lightcouch.CouchDbClient;
 import org.lightcouch.Response;
 
+import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,6 +19,29 @@ public class CouchCRUD {
         Response response = dbClient.save(bovine);
         dbClient.shutdown();
         return response;
+    }
+
+    public static JsonObject getById(Response response) {
+
+        CouchDbClient dbClient = new CouchDbClient();
+        String id = response.getId();
+        JsonObject found = dbClient.find(JsonObject.class, id);
+
+        System.out.println(getBovineFromJson(found));
+        dbClient.shutdown();
+        return found;
+
+    }
+
+    public static Bovine getBovineFromJson(JsonObject jsonObject) {
+
+//        Bovine bovine = new Gson().fromJson(jsonObject.getAsString(), Bovine.class);
+
+        Bovine bovine = new Gson().fromJson(jsonObject, Bovine.class);
+//        Staff staff = gson.fromJson(new FileReader("D:\\file.json"), Staff.class);
+
+        return bovine;
+
     }
 
 

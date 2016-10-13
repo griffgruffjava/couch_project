@@ -17,6 +17,8 @@ public class MartSale implements Movement {
 
     double pricePerHead;
 
+    public MartSale(){}
+
     public MartSale(MartRegistration registration, Herd buyer, LocalDate saleDate, int lotWeightKg, double aveWeightKg, double pricePerHead) {
         this.registration = registration;
         this.buyer = buyer;

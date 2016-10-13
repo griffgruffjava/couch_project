@@ -6,9 +6,9 @@ import java.util.List;
  */
 public class Bovine {
 
-    Herd herd;
+    Herd originHerd;
 
-    String id;
+    String tag;
 
     String breed;
 
@@ -18,27 +18,27 @@ public class Bovine {
 
     List<Movement> movements;
 
-    public Bovine(Herd herd, String id, String breed, LocalDate dob) {
-        this.herd = herd;
-        this.id = id;
+    public Bovine(Herd originHerd, String tag, String breed, LocalDate dob) {
+        this.originHerd = originHerd;
+        this.tag = tag;
         this.breed = breed;
         this.dob = dob;
     }
 
-    public Herd getHerd() {
-        return herd;
+    public Herd getOriginHerd() {
+        return originHerd;
     }
 
-    public void setHerd(Herd herd) {
-        this.herd = herd;
+    public void setOriginHerd(Herd originHerd) {
+        this.originHerd = originHerd;
     }
 
-    public String getId() {
-        return id;
+    public String getTag() {
+        return tag;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setTag(String tag) {
+        this.tag = tag;
     }
 
     public String getBreed() {
