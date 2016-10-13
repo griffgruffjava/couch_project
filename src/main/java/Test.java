@@ -1,5 +1,6 @@
 import org.lightcouch.CouchDbClient;
 import org.lightcouch.CouchDbProperties;
+import org.lightcouch.Response;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -21,7 +22,7 @@ public class Test {
 
         Bovine bovine = new Bovine(owner, "IE 7843 43432", "HEX", "15/05/2015");
 
-        dbClient.save(bovine);
+        Response response = dbClient.save(bovine);
 
         Map<String, String> map = new HashMap<String, String>();
 
