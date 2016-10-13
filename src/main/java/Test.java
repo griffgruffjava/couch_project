@@ -1,5 +1,4 @@
 import org.lightcouch.CouchDbClient;
-import org.lightcouch.CouchDbProperties;
 import org.lightcouch.Response;
 
 import java.util.HashMap;
@@ -18,9 +17,9 @@ public class Test {
 
         CouchDbClient dbClient = new CouchDbClient();
 
-        Owner owner = new Owner("Tom Farmer", "H0177666", "Ballinog, Tralee, Co Kerry");
+        Herd herd = new Herd("Tom Farmer", "H0177666", "Ballinog, Tralee, Co Kerry");
 
-        Bovine bovine = new Bovine(owner, "IE 7843 43432", "HEX", "15/05/2015");
+        Bovine bovine = new Bovine(herd, "IE 7843 43432", "HEX", "15/05/2015");
 
         Response response = dbClient.save(bovine);
 

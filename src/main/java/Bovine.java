@@ -3,7 +3,7 @@
  */
 public class Bovine {
 
-    Owner owner;
+    Herd herd;
 
     String id;
 
@@ -11,8 +11,8 @@ public class Bovine {
 
     String dob;
 
-    public Bovine(Owner owner, String id, String breed, String dob) {
-        this.owner = owner;
+    public Bovine(Herd herd, String id, String breed, String dob) {
+        this.herd = herd;
         this.id = id;
         this.breed = breed;
         this.dob = id;
