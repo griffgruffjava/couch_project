@@ -5,17 +5,12 @@ import java.time.LocalDate;
  */
 public class MartSale implements Movement {
 
-    MartRegistration registration;
-
-    Herd buyer;
-
-    LocalDate saleDate;
-
-    int lotWeightKg;
-
-    double aveWeightKg;
-
-    double pricePerHead;
+    private MartRegistration registration;
+    private Herd buyer;
+    private LocalDate saleDate;
+    private int lotWeightKg;
+    private double aveWeightKg;
+    private double pricePerHead;
 
     public MartSale(){}
 
@@ -51,4 +46,17 @@ public class MartSale implements Movement {
     public double getPricePerHead() {
         return pricePerHead;
     }
+
+    @Override
+    public String toString() {
+        return "MartSale{" +
+                "registration=" + registration +
+                ", buyer=" + buyer +
+                ", saleDate=" + saleDate +
+                ", lotWeightKg=" + lotWeightKg +
+                ", aveWeightKg=" + aveWeightKg +
+                ", pricePerHead=" + pricePerHead +
+                '}';
+    }
+
 }

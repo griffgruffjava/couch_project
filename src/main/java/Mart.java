@@ -3,13 +3,12 @@
  */
 public class Mart {
 
-    String martId;
+    private String martId;
+    private String addressOne;
+    private String town;
+    private String phone;
 
-    String addressOne;
-
-    String town;
-
-    String phone;
+    public Mart(){}
 
     public Mart(String martId, String addressOne, String town, String phone) {
         this.martId = martId;
@@ -44,5 +43,15 @@ public class Mart {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    @Override
+    public String toString() {
+        return "Mart{" +
+                "martId='" + martId + '\'' +
+                ", addressOne='" + addressOne + '\'' +
+                ", town='" + town + '\'' +
+                ", phone='" + phone + '\'' +
+                '}';
     }
 }

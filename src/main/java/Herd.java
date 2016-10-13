@@ -10,6 +10,8 @@ public class Herd {
     private String county;
 
 
+    public Herd(){}
+
     public Herd(String name, String herdNumber, String townland, String town, String county) {
         this.name = name;
         this.herdNumber = herdNumber;
@@ -39,4 +41,14 @@ public class Herd {
         return county;
     }
 
+    @Override
+    public String toString() {
+        return "Herd{" +
+                "name='" + name + '\'' +
+                ", herdNumber='" + herdNumber + '\'' +
+                ", townland='" + townland + '\'' +
+                ", town='" + town + '\'' +
+                ", county='" + county + '\'' +
+                '}';
+    }
 }

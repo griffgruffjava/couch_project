@@ -5,11 +5,9 @@ import java.time.LocalDate;
  */
 public class PrivateSale implements Movement {
 
-    Herd buyer;
-
-    Herd seller;
-
-    LocalDate saleDate;
+    private Herd buyer;
+    private Herd seller;
+    private LocalDate saleDate;
 
     public PrivateSale(){}
 
@@ -41,5 +39,14 @@ public class PrivateSale implements Movement {
 
     public void setSaleDate(LocalDate saleDate) {
         this.saleDate = saleDate;
+    }
+
+    @Override
+    public String toString() {
+        return "PrivateSale{" +
+                "buyer=" + buyer +
+                ", seller=" + seller +
+                ", saleDate=" + saleDate +
+                '}';
     }
 }

@@ -25,11 +25,11 @@ public class CouchCRUD {
 
         CouchDbClient dbClient = new CouchDbClient();
         String id = response.getId();
-        JsonObject found = dbClient.find(JsonObject.class, id);
+        Bovine found = dbClient.find(Bovine.class, id);
 
-        System.out.println(getBovineFromJson(found));
+        System.out.println(found.getTbTests().toString());
         dbClient.shutdown();
-        return found;
+        return null;
 
     }
 

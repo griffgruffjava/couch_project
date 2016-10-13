@@ -5,9 +5,11 @@ import java.time.LocalDate;
  */
 public class TbTest {
 
-    LocalDate testDate;
+    private LocalDate testDate;
+    private Vet testVet;
 
-    Vet testVet;
+    public TbTest() {
+    }
 
     public TbTest(LocalDate testDate, Vet testVet) {
         this.testDate = testDate;
@@ -28,5 +30,13 @@ public class TbTest {
 
     public void setTestVet(Vet testVet) {
         this.testVet = testVet;
+    }
+
+    @Override
+    public String toString() {
+        return "TbTest{" +
+                "testDate=" + testDate +
+                ", testVet=" + testVet +
+                '}';
     }
 }

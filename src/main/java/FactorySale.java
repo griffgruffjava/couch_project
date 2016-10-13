@@ -5,13 +5,12 @@ import java.time.LocalDate;
  */
 public class FactorySale implements Movement {
 
-    Factory factory;
+    private Factory factory;
+    private Herd seller;
+    private LocalDate saleDate;
+    private double killWeight;
 
-    Herd seller;
-
-    LocalDate saleDate;
-
-    double killWeight;
+    public FactorySale(){}
 
     public FactorySale(Factory factory, Herd seller, LocalDate saleDate, double killWeight) {
         this.factory = factory;
@@ -50,5 +49,15 @@ public class FactorySale implements Movement {
 
     public void setKillWeight(double killWeight) {
         this.killWeight = killWeight;
+    }
+
+    @Override
+    public String toString() {
+        return "FactorySale{" +
+                "factory=" + factory +
+                ", seller=" + seller +
+                ", saleDate=" + saleDate +
+                ", killWeight=" + killWeight +
+                '}';
     }
 }

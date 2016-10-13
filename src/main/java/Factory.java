@@ -5,9 +5,10 @@ import java.time.LocalDate;
  */
 public class Factory {
 
-    String factoryId;
+    private String factoryId;
+    private String factoryName;
 
-    String factoryName;
+    public Factory(){}
 
     public Factory(String factoryId, String factoryName) {
         this.factoryId = factoryId;
@@ -28,5 +29,13 @@ public class Factory {
 
     public void setFactoryName(String factoryName) {
         this.factoryName = factoryName;
+    }
+
+    @Override
+    public String toString() {
+        return "Factory{" +
+                "factoryId='" + factoryId + '\'' +
+                ", factoryName='" + factoryName + '\'' +
+                '}';
     }
 }

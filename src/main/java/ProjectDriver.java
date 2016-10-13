@@ -36,7 +36,7 @@ public class ProjectDriver {
         List<Movement> movements = new ArrayList<>();
         movements.add(martSale);
         movements.add(privateSale);
-        bovine.setMovements(movements);
+//        bovine.setMovements(movements);
 
         List<TbTest> tests = new ArrayList<>();
         tests.add(tbTest);

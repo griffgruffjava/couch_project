@@ -6,17 +6,14 @@ import java.util.List;
  */
 public class Bovine {
 
-    Herd originHerd;
+    private Herd originHerd;
+    private String tag;
+    private String breed;
+    private LocalDate dob;
+    private List<TbTest> tbTests;
+    private List<Movement> movements;
 
-    String tag;
-
-    String breed;
-
-    LocalDate dob;
-
-    List<TbTest> tbTests;
-
-    List<Movement> movements;
+    public Bovine(){}
 
     public Bovine(Herd originHerd, String tag, String breed, LocalDate dob) {
         this.originHerd = originHerd;
@@ -71,5 +68,27 @@ public class Bovine {
 
     public void setMovements(List<Movement> movements) {
         this.movements = movements;
+    }
+
+    @Override
+    public String toString() {
+
+        String movementsAsString = "";
+        for(Movement m: movements){
+            movementsAsString += m.toString();
+        }
+
+        String tbTestsAsString = "";
+        for(TbTest tbTest: tbTests){
+            tbTestsAsString += tbTest.toString();
+        }
+        return "Bovine{" +
+                "originHerd=" + originHerd +
+                ", tag='" + tag + '\'' +
+                ", breed='" + breed + '\'' +
+                ", dob=" + dob +
+                ", tbTests=" + tbTestsAsString +
+                ", movements=" + movementsAsString+
+                '}';
     }
 }

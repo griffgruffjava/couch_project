@@ -3,13 +3,12 @@
  */
 public class MartRegistration {
 
-    Mart mart;
+    private Mart mart;
+    private Herd seller;
+    private int lotNo;
+    private int lotSize;
 
-    Herd seller;
-
-    int lotNo;
-
-    int lotSize;
+    public MartRegistration(){}
 
     public MartRegistration(Mart mart, Herd seller, int lotNo, int lotSize) {
         this.mart = mart;

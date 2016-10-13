@@ -3,11 +3,15 @@
  */
 public class Vet {
 
-    String vetId;
+    private String vetId;
+    private String clinicName;
+    private String phoneNumber;
 
-    String clinicName;
+    public Vet(){}
 
-    String phoneNumber;
+    public Vet(String vetId) {
+        this.vetId = vetId;
+    }
 
     public Vet(String vetId, String clinicName, String phoneNumber) {
         this.vetId = vetId;
@@ -34,5 +38,14 @@ public class Vet {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "Vet{" +
+                "vetId='" + vetId + '\'' +
+                ", clinicName='" + clinicName + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                '}';
     }
 }
