@@ -13,13 +13,23 @@ public class Bovine {
     private List<TbTest> tbTests;
     private List<Movement> movements;
 
-    public Bovine(){}
+    public Bovine() {
+    }
 
     public Bovine(Herd originHerd, String tag, String breed, LocalDate dob) {
         this.originHerd = originHerd;
         this.tag = tag;
         this.breed = breed;
         this.dob = dob;
+    }
+
+    public Bovine(Herd originHerd, String tag, String breed, LocalDate dob, List<TbTest> tbTests, List<Movement> movements) {
+        this.originHerd = originHerd;
+        this.tag = tag;
+        this.breed = breed;
+        this.dob = dob;
+        this.tbTests = tbTests;
+        this.movements = movements;
     }
 
     public Herd getOriginHerd() {
@@ -73,22 +83,25 @@ public class Bovine {
     @Override
     public String toString() {
 
-        String movementsAsString = "";
-        for(Movement m: movements){
-            movementsAsString += m.toString();
-        }
-
-        String tbTestsAsString = "";
-        for(TbTest tbTest: tbTests){
-            tbTestsAsString += tbTest.toString();
-        }
+//        String movementsAsString = "";
+//        if ((movements != null) || !movements.isEmpty()) {
+//
+//            for (Movement m : movements) {
+//                movementsAsString += m.toString();
+//            }
+//        }
+//
+//        String tbTestsAsString = "";
+//        for (TbTest tbTest : tbTests) {
+//            tbTestsAsString += tbTest.toString();
+//        }
         return "Bovine{" +
                 "originHerd=" + originHerd +
                 ", tag='" + tag + '\'' +
                 ", breed='" + breed + '\'' +
                 ", dob=" + dob +
-                ", tbTests=" + tbTestsAsString +
-                ", movements=" + movementsAsString+
+//                ", tbTests=" + tbTestsAsString +
+//                ", movements=" + movementsAsString +
                 '}';
     }
 }

@@ -1,3 +1,4 @@
+import com.google.gson.JsonObject;
 import org.lightcouch.Response;
 
 import java.time.LocalDate;
@@ -47,10 +48,15 @@ public class ProjectDriver {
 
 //        System.out.println(response.toString());
 
-//        System.out.println(CouchCRUD.getById(response));
+//        System.out.println(CouchCRUD.getJsonObjectById(response));
 
 
-        CouchCRUD.getById(response);
+        JsonObject jsonObject = CouchCRUD.getJsonObjectById(response);
+        System.out.println(jsonObject);
+        Bovine b = CouchCRUD.getBovineById(response);
+        System.out.println(b.toString());
+        List<Movement> m = b.getMovements();
+        System.out.println(m.size());
 
 
 

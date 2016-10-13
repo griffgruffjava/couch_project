@@ -21,17 +21,29 @@ public class CouchCRUD {
         return response;
     }
 
-    public static JsonObject getById(Response response) {
+    public static JsonObject getJsonObjectById(Response response) {
 
         CouchDbClient dbClient = new CouchDbClient();
         String id = response.getId();
-        Bovine found = dbClient.find(Bovine.class, id);
-
-        System.out.println(found.getTbTests().toString());
+        JsonObject foundJsonObject = dbClient.find(JsonObject.class, id);
+//        System.out.println(found.toString());
         dbClient.shutdown();
-        return null;
+        return foundJsonObject;
 
     }
+
+    public static Bovine getBovineById(Response response) {
+
+        CouchDbClient dbClient = new CouchDbClient();
+        String id = response.getId();
+        Bovine foundBovine = dbClient.find(Bovine.class, id);
+//        System.out.println(foundBovine.toString());
+        dbClient.shutdown();
+        return foundBovine;
+
+    }
+
+
 
     public static Bovine getBovineFromJson(JsonObject jsonObject) {
 
