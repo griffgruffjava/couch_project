@@ -67,7 +67,7 @@ public class CouchCRUD {
 
         CouchDbClient dbClient = new CouchDbClient();
         Bovine bovine = getBovineFromId(tagId);
-        if(!bovine.getDeceased()) {
+
             try {
                 List<PrivateSale> currentSales = bovine.getSales();
                 currentSales.add(sale);
@@ -81,7 +81,7 @@ public class CouchCRUD {
 
 
             dbClient.update(bovine);
-        }
+
         dbClient.shutdown();
     }
 

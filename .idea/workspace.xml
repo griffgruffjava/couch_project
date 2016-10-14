@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e377437f-adda-4d5c-b783-5475deded880" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/intellij_forms_rt.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/intellij_forms_rt_src.zip" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/IntelliJ_IDEA_GridLayout.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ProjectGui.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ProjectGui.jfd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/RegisterAnimal.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/RegisterAnimal.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/couchGui.jfd" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/couch_project.iml" afterPath="$PROJECT_DIR$/couch_project.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/CouchCRUD.java" afterPath="$PROJECT_DIR$/src/main/java/CouchCRUD.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ProjectDriver.java" afterPath="$PROJECT_DIR$/src/main/java/ProjectDriver.java" />
     </list>
     <ignored path="couch_project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -65,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegisterAnimal.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RegisterAnimal.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/RegisterAnimal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="61" column="58" selection-start-line="61" selection-start-column="58" selection-end-line="61" selection-end-column="58" />
+            <state relative-caret-position="258">
+              <caret line="49" column="62" selection-start-line="49" selection-start-column="62" selection-end-line="49" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CouchCRUD.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CouchCRUD.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CouchCRUD.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="69" column="12" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
+            <state relative-caret-position="187">
+              <caret line="72" column="39" selection-start-line="72" selection-start-column="39" selection-end-line="72" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -190,11 +179,11 @@
         <option value="$PROJECT_DIR$/src/main/resources/couchdb.properties" />
         <option value="$PROJECT_DIR$/views" />
         <option value="$PROJECT_DIR$/src/main/java/Bovine.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CouchCRUD.java" />
         <option value="$PROJECT_DIR$/ProjectGui.jfd" />
         <option value="$PROJECT_DIR$/src/main/java/ProjectDriver.java" />
         <option value="$PROJECT_DIR$/src/main/java/RegisterAnimal.form" />
         <option value="$PROJECT_DIR$/src/main/java/RegisterAnimal.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CouchCRUD.java" />
       </list>
     </option>
   </component>
@@ -908,16 +897,16 @@
       <workItem from="1476432665219" duration="6142000" />
       <workItem from="1476439882558" duration="6759000" />
       <workItem from="1476451569928" duration="1167000" />
-      <workItem from="1476452764246" duration="7175000" />
+      <workItem from="1476452764246" duration="7389000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43047000" />
+    <option name="totallyTimeSpent" value="43261000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -927,8 +916,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24350649" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24350649" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1369936" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1434,21 +1423,21 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/RegisterAnimal.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/CouchCRUD.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="61" column="58" selection-start-line="61" selection-start-column="58" selection-end-line="61" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="72" column="39" selection-start-line="72" selection-start-column="39" selection-end-line="72" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CouchCRUD.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/RegisterAnimal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="69" column="12" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
-          <folding />
+        <state relative-caret-position="258">
+          <caret line="49" column="62" selection-start-line="49" selection-start-column="62" selection-end-line="49" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
