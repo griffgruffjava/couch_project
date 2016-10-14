@@ -28,16 +28,14 @@ public class ProjectDriver {
 
         Mart mart = new Mart("R567", "Castleray", "Tralee", "0667384");
 
-        MartRegistration martRegistration = new MartRegistration(mart, herd, 701, 1);
+        MartSale martSale = new MartSale(buyer, herd, LocalDate.now().minusMonths(9), mart, 701, 1, 787, 787.00, 957.00);
 
-        MartSale martSale = new MartSale(martRegistration, buyer, LocalDate.now(), 787, 787.00, 957.00);
+        PrivateSale privateSale = new PrivateSale(herd, buyer, LocalDate.now());
 
-        PrivateSale privateSale = new PrivateSale(buyer, herd, LocalDate.now());
-
-        List<Movement> movements = new ArrayList<>();
-        movements.add(martSale);
-        movements.add(privateSale);
-//        bovine.setMovements(movements);
+//        List<PrivateSale> sales = new ArrayList<>();
+//        sales.add(martSale);
+//        sales.add(privateSale);
+//        bovine.setSales(sales);
 
         List<TbTest> tests = new ArrayList<>();
         tests.add(tbTest);
@@ -55,8 +53,8 @@ public class ProjectDriver {
         System.out.println(jsonObject);
         Bovine b = CouchCRUD.getBovineById(response);
         System.out.println(b.toString());
-        List<Movement> m = b.getMovements();
-        System.out.println(m.size());
+        List<TbTest> m = b.getTbTests();
+        System.out.println(m.toString());
 
 
 

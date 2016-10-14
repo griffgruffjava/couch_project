@@ -3,19 +3,19 @@ import java.time.LocalDate;
 /**
  * Created by T00175569 on 13/10/2016.
  */
-public class FactorySale implements Movement {
+public class FactoryDelivery {
 
     private Factory factory;
     private Herd seller;
-    private LocalDate saleDate;
+    private LocalDate killDate;
     private double killWeight;
 
-    public FactorySale(){}
+    public FactoryDelivery(){}
 
-    public FactorySale(Factory factory, Herd seller, LocalDate saleDate, double killWeight) {
+    public FactoryDelivery(Factory factory, Herd seller, LocalDate killDate, double killWeight) {
         this.factory = factory;
         this.seller = seller;
-        this.saleDate = saleDate;
+        this.killDate = killDate;
         this.killWeight = killWeight;
     }
 
@@ -35,12 +35,12 @@ public class FactorySale implements Movement {
         this.seller = seller;
     }
 
-    public LocalDate getSaleDate() {
-        return saleDate;
+    public LocalDate getKillDate() {
+        return killDate;
     }
 
-    public void setSaleDate(LocalDate saleDate) {
-        this.saleDate = saleDate;
+    public void setKillDate(LocalDate killDate) {
+        this.killDate = killDate;
     }
 
     public double getKillWeight() {
@@ -53,10 +53,10 @@ public class FactorySale implements Movement {
 
     @Override
     public String toString() {
-        return "FactorySale{" +
+        return "FactoryDelivery{" +
                 "factory=" + factory +
                 ", seller=" + seller +
-                ", saleDate=" + saleDate +
+                ", killDate=" + killDate +
                 ", killWeight=" + killWeight +
                 '}';
     }

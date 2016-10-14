@@ -11,7 +11,7 @@ public class Bovine {
     private String breed;
     private LocalDate dob;
     private List<TbTest> tbTests;
-    private List<Movement> movements;
+    private List<PrivateSale> sales;
 
     public Bovine() {
     }
@@ -23,13 +23,13 @@ public class Bovine {
         this.dob = dob;
     }
 
-    public Bovine(Herd originHerd, String tag, String breed, LocalDate dob, List<TbTest> tbTests, List<Movement> movements) {
+    public Bovine(Herd originHerd, String tag, String breed, LocalDate dob, List<TbTest> tbTests, List<PrivateSale> sales) {
         this.originHerd = originHerd;
         this.tag = tag;
         this.breed = breed;
         this.dob = dob;
         this.tbTests = tbTests;
-        this.movements = movements;
+        this.sales = sales;
     }
 
     public Herd getOriginHerd() {
@@ -72,36 +72,23 @@ public class Bovine {
         this.tbTests = tbTests;
     }
 
-    public List<Movement> getMovements() {
-        return movements;
+    public List<PrivateSale> getSales() {
+        return sales;
     }
 
-    public void setMovements(List<Movement> movements) {
-        this.movements = movements;
+    public void setSales(List<PrivateSale> sales) {
+        this.sales = sales;
     }
 
     @Override
     public String toString() {
-
-//        String movementsAsString = "";
-//        if ((movements != null) || !movements.isEmpty()) {
-//
-//            for (Movement m : movements) {
-//                movementsAsString += m.toString();
-//            }
-//        }
-//
-//        String tbTestsAsString = "";
-//        for (TbTest tbTest : tbTests) {
-//            tbTestsAsString += tbTest.toString();
-//        }
         return "Bovine{" +
                 "originHerd=" + originHerd +
                 ", tag='" + tag + '\'' +
                 ", breed='" + breed + '\'' +
                 ", dob=" + dob +
-//                ", tbTests=" + tbTestsAsString +
-//                ", movements=" + movementsAsString +
+                ", tbTests=" + tbTests +
+                ", sales=" + sales +
                 '}';
     }
 }

@@ -3,7 +3,7 @@ import java.time.LocalDate;
 /**
  * Created by T00175569 on 13/10/2016.
  */
-public class PrivateSale implements Movement {
+public class PrivateSale {
 
     private Herd buyer;
     private Herd seller;

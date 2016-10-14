@@ -56,6 +56,13 @@ public class CouchCRUD {
 
     }
 
+    public static Bovine getBovineFromTagWithView(String tag){
+
+
+        return null;
+
+    }
+
 
 
 }
