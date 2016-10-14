@@ -6,11 +6,10 @@ import java.util.List;
  */
 public class Bovine {
 
-    private Herd originHerd;
+
+    private RegistationProfile registationProfile;
     private String _id;
     private String _rev;
-    private String breed;
-    private LocalDate dob;
     private List<TbTest> tbTests;
     private List<PrivateSale> sales;
     private FactoryDelivery factoryDelivery;
@@ -19,28 +18,19 @@ public class Bovine {
     public Bovine() {
     }
 
-    public Bovine(Herd originHerd, String _id, String breed, LocalDate dob) {
-        this.originHerd = originHerd;
+    public Bovine(RegistationProfile registationProfile, String _id) {
+        this.registationProfile = registationProfile;
         this._id = _id;
-        this.breed = breed;
-        this.dob = dob;
+
     }
 
-    public Bovine(Herd originHerd, String _id, String breed, LocalDate dob, List<TbTest> tbTests, List<PrivateSale> sales) {
-        this.originHerd = originHerd;
-        this._id = _id;
-        this.breed = breed;
-        this.dob = dob;
-        this.tbTests = tbTests;
-        this.sales = sales;
+
+    public RegistationProfile getRegistationProfile() {
+        return registationProfile;
     }
 
-    public Herd getOriginHerd() {
-        return originHerd;
-    }
-
-    public void setOriginHerd(Herd originHerd) {
-        this.originHerd = originHerd;
+    public void setRegistationProfile(RegistationProfile registationProfile) {
+        this.registationProfile = registationProfile;
     }
 
     public String get_id() {
@@ -57,22 +47,6 @@ public class Bovine {
 
     public void set_rev(String _rev) {
         this._rev = _rev;
-    }
-
-    public String getBreed() {
-        return breed;
-    }
-
-    public void setBreed(String breed) {
-        this.breed = breed;
-    }
-
-    public LocalDate getDob() {
-        return dob;
-    }
-
-    public void setDob(LocalDate dob) {
-        this.dob = dob;
     }
 
     public List<TbTest> getTbTests() {
@@ -104,17 +78,17 @@ public class Bovine {
         return isDeceased;
     }
 
+
     @Override
     public String toString() {
         return "Bovine{" +
-                "originHerd=" + originHerd +
+                "registationProfile=" + registationProfile +
                 ", _id='" + _id + '\'' +
                 ", _rev='" + _rev + '\'' +
-                ", breed='" + breed + '\'' +
-                ", dob=" + dob +
                 ", tbTests=" + tbTests +
                 ", sales=" + sales +
                 ", factoryDelivery=" + factoryDelivery +
+                ", isDeceased=" + isDeceased +
                 '}';
     }
 }

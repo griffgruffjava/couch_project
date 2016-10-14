@@ -1,18 +1,20 @@
+import java.time.LocalDate;
+
 /**
  * Created by T00175569 on 13/10/2016.
  */
 public class RegistationProfile {
 
-    private String dob;
+    private LocalDate dob;
     private String sex;
     private String damId;
-    private String cardIssueDate;
+    private LocalDate cardIssueDate;
     private Herd originHerd;
 
     public RegistationProfile() {
     }
 
-    public RegistationProfile(String dob, String sex, String damId, String cardIssueDate, Herd originHerd) {
+    public RegistationProfile(LocalDate dob, String sex, String damId, LocalDate cardIssueDate, Herd originHerd) {
         this.dob = dob;
         this.sex = sex;
         this.damId = damId;
@@ -20,11 +22,11 @@ public class RegistationProfile {
         this.originHerd = originHerd;
     }
 
-    public String getDob() {
+    public LocalDate getDob() {
         return dob;
     }
 
-    public void setDob(String dob) {
+    public void setDob(LocalDate dob) {
         this.dob = dob;
     }
 
@@ -44,11 +46,11 @@ public class RegistationProfile {
         this.damId = damId;
     }
 
-    public String getCardIssueDate() {
+    public LocalDate getCardIssueDate() {
         return cardIssueDate;
     }
 
-    public void setCardIssueDate(String cardIssueDate) {
+    public void setCardIssueDate(LocalDate cardIssueDate) {
         this.cardIssueDate = cardIssueDate;
     }
 

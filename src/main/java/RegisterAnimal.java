@@ -69,11 +69,11 @@ public class RegisterAnimal extends JFrame{
         });
     }
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("RegisterAnimal");
-        frame.setContentPane(new RegisterAnimal().bigPanel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
-    }
+//    public static void main(String[] args) {
+//        JFrame frame = new JFrame("RegisterAnimal");
+//        frame.setContentPane(new RegisterAnimal().bigPanel);
+//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        frame.pack();
+//        frame.setVisible(true);
+//    }
 }
