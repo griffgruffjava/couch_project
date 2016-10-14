@@ -100,6 +100,10 @@ public class Bovine {
         isDeceased = true;
     }
 
+    public Boolean getDeceased() {
+        return isDeceased;
+    }
+
     @Override
     public String toString() {
         return "Bovine{" +

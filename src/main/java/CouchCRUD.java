@@ -5,6 +5,7 @@ import org.lightcouch.Response;
 import org.lightcouch.View;
 import org.lightcouch.ViewResult;
 
+import javax.swing.*;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -29,9 +30,16 @@ public class CouchCRUD {
     public static Bovine getBovineFromId(String id){
 
         CouchDbClient dbClient = new CouchDbClient();
-        Bovine foundBovine = dbClient.find(Bovine.class, id);
-        dbClient.shutdown();
-        return foundBovine;
+        try {
+            Bovine foundBovine = dbClient.find(Bovine.class, id);
+            dbClient.shutdown();
+            return foundBovine;
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Enable to find animal with matching Tag");
+        }
+
+        return null;
+
     }
 
 
@@ -39,35 +47,41 @@ public class CouchCRUD {
 
         CouchDbClient dbClient = new CouchDbClient();
         Bovine bovine = getBovineFromId(tagId);
-        try {
-            List<TbTest> currentTests = bovine.getTbTests();
-            currentTests.add(test);
-            bovine.setTbTests(currentTests);
-        } catch (Exception e) {
-            List<TbTest> newTests = new ArrayList<>();
-            newTests.add(test);
-            bovine.setTbTests(newTests);
+        if(!bovine.getDeceased()) {
+            try {
+                List<TbTest> currentTests = bovine.getTbTests();
+                currentTests.add(test);
+                bovine.setTbTests(currentTests);
+            } catch (Exception e) {
+                List<TbTest> newTests = new ArrayList<>();
+                newTests.add(test);
+                bovine.setTbTests(newTests);
+            }
+            dbClient.update(bovine);
         }
-        dbClient.update(bovine);
         dbClient.shutdown();
     }
 
     public static void putSaleToBovine(String tagId, PrivateSale sale){
 
+
         CouchDbClient dbClient = new CouchDbClient();
         Bovine bovine = getBovineFromId(tagId);
-        try {
-            List<PrivateSale> currentSales = bovine.getSales();
-            currentSales.add(sale);
-            bovine.setSales(currentSales);
-        } catch (Exception e){
+        if(!bovine.getDeceased()) {
+            try {
+                List<PrivateSale> currentSales = bovine.getSales();
+                currentSales.add(sale);
+                bovine.setSales(currentSales);
+            } catch (Exception e) {
 
-            List<PrivateSale> newSales = new ArrayList<>();
-            newSales.add(sale);
-            bovine.setSales(newSales);
+                List<PrivateSale> newSales = new ArrayList<>();
+                newSales.add(sale);
+                bovine.setSales(newSales);
+            }
+
+
+            dbClient.update(bovine);
         }
-
-        dbClient.update(bovine);
         dbClient.shutdown();
     }
 
@@ -75,9 +89,27 @@ public class CouchCRUD {
 
         CouchDbClient dbClient = new CouchDbClient();
         Bovine bovine = getBovineFromId(tagId);
-        bovine.setFactoryDelivery(factoryDelivery);
-        dbClient.update(bovine);
+        if(!bovine.getDeceased()) {
+            bovine.setFactoryDelivery(factoryDelivery);
+            dbClient.update(bovine);
+        }
         dbClient.shutdown();
+    }
+
+
+    public static void deleteBovine(String tag){
+
+        int dialogButton = JOptionPane.YES_NO_OPTION;
+        int dialogResult = JOptionPane.showConfirmDialog (null, "You are about to permanently delete all records for the animal. Do you wish to proceed?","Warning",dialogButton);
+        if(dialogResult == JOptionPane.YES_OPTION){
+            CouchDbClient dbClient = new CouchDbClient();
+            Bovine bovine = getBovineFromId(tag);
+            dbClient.remove(bovine);
+            JOptionPane.showMessageDialog(null, "The animal with matching Tag " + tag + " has been deleted");
+        }
+
+
+
     }
 
 

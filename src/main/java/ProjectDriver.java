@@ -57,8 +57,13 @@ public class ProjectDriver {
 
 //        TbTest newTest = new TbTest(LocalDate.now().plusDays(45), vet );
 //        CouchCRUD.putTbTestToBovine(tag, newTest);
-        MartSale newMartSale = new MartSale(buyer, herd, LocalDate.now().plusMonths(1), mart, 547, 2, 1500, 750.00, 1010.00);
-        CouchCRUD.putSaleToBovine(tag, newMartSale);
+//        MartSale newMartSale = new MartSale(buyer, herd, LocalDate.now().plusMonths(1), mart, 547, 2, 1500, 750.00, 1010.00);
+//        CouchCRUD.putSaleToBovine(tag, newMartSale);
+//        Factory factory = new Factory("E45", "The Abotwor");
+//        FactoryDelivery kill = new FactoryDelivery(factory, herd, LocalDate.now().plusMonths(3), 1010.0);
+//        CouchCRUD.putFactoryDeliveryToBovine(tag, kill);
+
+        CouchCRUD.deleteBovine(tag);
 
 
     }
