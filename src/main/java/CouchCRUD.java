@@ -35,7 +35,7 @@ public class CouchCRUD {
             dbClient.shutdown();
             return foundBovine;
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Enable to find animal with matching Tag");
+            JOptionPane.showMessageDialog(null, "Unable to find animal with Tag matching " + id);
         }
 
         return null;
@@ -100,12 +100,14 @@ public class CouchCRUD {
     public static void deleteBovine(String tag){
 
         int dialogButton = JOptionPane.YES_NO_OPTION;
-        int dialogResult = JOptionPane.showConfirmDialog (null, "You are about to permanently delete all records for the animal. Do you wish to proceed?","Warning",dialogButton);
+        int dialogResult = JOptionPane.showConfirmDialog (null, "You are about to permanently delete all records for " + tag + ". Do you wish to proceed?","Warning",dialogButton);
         if(dialogResult == JOptionPane.YES_OPTION){
             CouchDbClient dbClient = new CouchDbClient();
             Bovine bovine = getBovineFromId(tag);
-            dbClient.remove(bovine);
-            JOptionPane.showMessageDialog(null, "The animal with matching Tag " + tag + " has been deleted");
+            if(bovine != null) {
+                dbClient.remove(bovine);
+                JOptionPane.showMessageDialog(null, "The animal with matching Tag " + tag + " has been deleted");
+            }
         }
 
 

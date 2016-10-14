@@ -1,3 +1,5 @@
+import org.lightcouch.Response;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,9 +9,10 @@ import java.util.List;
  */
 public class ProjectDriver {
 
+//    RegisterAnimal gui;
 
 
-    public static void main(String args[]) {
+//    public static void main(String args[]) {
 
         String tag = "IE 4342343546";
 
@@ -31,15 +34,17 @@ public class ProjectDriver {
 
         PrivateSale privateSale = new PrivateSale(herd, buyer, LocalDate.now());
 
+
+
 //        List<PrivateSale> sales = new ArrayList<>();
 //        sales.add(martSale);
 //        sales.add(privateSale);
 //        bovine.setSales(sales);
-
-        List<TbTest> tests = new ArrayList<>();
-        tests.add(tbTest);
-        tests.add(tbTest2);
-        bovine.setTbTests(tests);
+//
+//        List<TbTest> tests = new ArrayList<>();
+//        tests.add(tbTest);
+//        tests.add(tbTest2);
+//        bovine.setTbTests(tests);
 
 //        Response response = CouchCRUD.postToCouch(bovine);
 
@@ -63,9 +68,13 @@ public class ProjectDriver {
 //        FactoryDelivery kill = new FactoryDelivery(factory, herd, LocalDate.now().plusMonths(3), 1010.0);
 //        CouchCRUD.putFactoryDeliveryToBovine(tag, kill);
 
-        CouchCRUD.deleteBovine(tag);
+//        CouchCRUD.deleteBovine(tag);
+
+//        RegisterAnimal gui = new RegisterAnimal();
 
 
-    }
+//    }
+
+
 
 }
