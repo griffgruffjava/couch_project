@@ -2,9 +2,12 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import org.lightcouch.CouchDbClient;
 import org.lightcouch.Response;
+import org.lightcouch.View;
+import org.lightcouch.ViewResult;
 
 import java.lang.reflect.Type;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -60,6 +63,29 @@ public class CouchCRUD {
 
 
         return null;
+
+    }
+
+    public static void addTbTestToBovineFromTag(String tag){
+
+        CouchDbClient dbClient = new CouchDbClient();
+        View view = dbClient.view("design/findIdByTag")
+                .key(tag) // complex key as: values, or array
+                .reduce(false)
+                .includeDocs(true);
+        System.out.println(view.queryView(int[].class, String.class, Bovine.class));
+//        ViewResult<int[], String, Bovine> entries = view.queryView(int[].class, String.class, Bovine.class);
+
+//        List<Bovine> list = dbClient.view("design/findIdByTag")
+//                .includeDocs(true)
+//                .startKey(tag)
+////                .endKey("end-key")
+//                .limit(10)
+//                .query(Bovine.class);
+
+
+        dbClient.shutdown();
+
 
     }
 

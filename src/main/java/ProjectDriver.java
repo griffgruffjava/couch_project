@@ -14,11 +14,13 @@ public class ProjectDriver {
 
     public static void main(String args[]) {
 
+        String tag = "IE 4342343546";
+
         Herd herd = new Herd("Pat Griffin", "H9823201", "Ballinasare", "Tralee", "Kerry");
 
         Herd buyer = new Herd("Tom Flynn", "H7281222", "Ardfert", "Ardfert", "Kerry");
 
-        Bovine bovine = new Bovine(herd, "IE 4342343546", "HEX", LocalDate.now());
+        Bovine bovine = new Bovine(herd, tag, "HEX", LocalDate.now());
 
         Vet vet = new Vet("E56", "Lawlers Vet");
 
@@ -50,12 +52,13 @@ public class ProjectDriver {
 
 
         JsonObject jsonObject = CouchCRUD.getJsonObjectById(response);
-        System.out.println(jsonObject);
+//        System.out.println(jsonObject);
         Bovine b = CouchCRUD.getBovineById(response);
-        System.out.println(b.toString());
+//        System.out.println(b.toString());
         List<TbTest> m = b.getTbTests();
-        System.out.println(m.toString());
+//        System.out.println(m.toString());
 
+        CouchCRUD.addTbTestToBovineFromTag(tag);
 
 
     }
