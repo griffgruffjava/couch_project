@@ -1,6 +1,3 @@
-import com.google.gson.JsonObject;
-import org.lightcouch.Response;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -44,21 +41,24 @@ public class ProjectDriver {
         tests.add(tbTest2);
         bovine.setTbTests(tests);
 
-        Response response = CouchCRUD.postToCouch(bovine);
+//        Response response = CouchCRUD.postToCouch(bovine);
 
 //        System.out.println(response.toString());
 
 //        System.out.println(CouchCRUD.getJsonObjectById(response));
 
 
-        JsonObject jsonObject = CouchCRUD.getJsonObjectById(response);
+//        JsonObject jsonObject = CouchCRUD.getJsonObjectById(response);
 //        System.out.println(jsonObject);
-        Bovine b = CouchCRUD.getBovineById(response);
+//        Bovine b = CouchCRUD.getBovineWithResponeId(response);
 //        System.out.println(b.toString());
-        List<TbTest> m = b.getTbTests();
+//        List<TbTest> m = b.getTbTests();
 //        System.out.println(m.toString());
 
-        CouchCRUD.addTbTestToBovineFromTag(tag);
+//        TbTest newTest = new TbTest(LocalDate.now().plusDays(45), vet );
+//        CouchCRUD.putTbTestToBovine(tag, newTest);
+        MartSale newMartSale = new MartSale(buyer, herd, LocalDate.now().plusMonths(1), mart, 547, 2, 1500, 750.00, 1010.00);
+        CouchCRUD.putSaleToBovine(tag, newMartSale);
 
 
     }

@@ -7,25 +7,28 @@ import java.util.List;
 public class Bovine {
 
     private Herd originHerd;
-    private String tag;
+    private String _id;
+    private String _rev;
     private String breed;
     private LocalDate dob;
     private List<TbTest> tbTests;
     private List<PrivateSale> sales;
+    private FactoryDelivery factoryDelivery;
+    private Boolean isDeceased;
 
     public Bovine() {
     }
 
-    public Bovine(Herd originHerd, String tag, String breed, LocalDate dob) {
+    public Bovine(Herd originHerd, String _id, String breed, LocalDate dob) {
         this.originHerd = originHerd;
-        this.tag = tag;
+        this._id = _id;
         this.breed = breed;
         this.dob = dob;
     }
 
-    public Bovine(Herd originHerd, String tag, String breed, LocalDate dob, List<TbTest> tbTests, List<PrivateSale> sales) {
+    public Bovine(Herd originHerd, String _id, String breed, LocalDate dob, List<TbTest> tbTests, List<PrivateSale> sales) {
         this.originHerd = originHerd;
-        this.tag = tag;
+        this._id = _id;
         this.breed = breed;
         this.dob = dob;
         this.tbTests = tbTests;
@@ -40,12 +43,20 @@ public class Bovine {
         this.originHerd = originHerd;
     }
 
-    public String getTag() {
-        return tag;
+    public String get_id() {
+        return _id;
     }
 
-    public void setTag(String tag) {
-        this.tag = tag;
+    public void set_id(String _id) {
+        this._id = _id;
+    }
+
+    public String get_rev() {
+        return _rev;
+    }
+
+    public void set_rev(String _rev) {
+        this._rev = _rev;
     }
 
     public String getBreed() {
@@ -80,15 +91,26 @@ public class Bovine {
         this.sales = sales;
     }
 
+    public FactoryDelivery getFactoryDelivery() {
+        return factoryDelivery;
+    }
+
+    public void setFactoryDelivery(FactoryDelivery factoryDelivery) {
+        this.factoryDelivery = factoryDelivery;
+        isDeceased = true;
+    }
+
     @Override
     public String toString() {
         return "Bovine{" +
                 "originHerd=" + originHerd +
-                ", tag='" + tag + '\'' +
+                ", _id='" + _id + '\'' +
+                ", _rev='" + _rev + '\'' +
                 ", breed='" + breed + '\'' +
                 ", dob=" + dob +
                 ", tbTests=" + tbTests +
                 ", sales=" + sales +
+                ", factoryDelivery=" + factoryDelivery +
                 '}';
     }
 }

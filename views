@@ -4,10 +4,29 @@
    "language": "javascript",
    "views": {
        "current_owner": {
-           "map": "function(doc) {\n  if(doc.sales) {\n\tsize = doc.sales.length;\n        emit(doc.tag, doc.sales[size-1].buyer);\n  }\n  else {\n\temit(doc.tag, doc.originHerd);\n}\n\t\n}"
+           "map": "function(doc) {\n  if(doc.sales) {\n\tsize = doc.sales.length;\n        emit(doc._id, doc.sales[size-1].buyer);\n  }\n  else {\n\temit(doc._id, doc.originHerd);\n}\n\t\n}"
        }
    }
 }
+
+function(doc) {
+	if(doc.sales) {
+		size = doc.sales.length;
+		emit(doc._id, doc.sales[size-1].buyer);
+	}
+	else {
+		emit(doc._id, doc.originHerd);
+	}
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -17,7 +36,43 @@
    "language": "javascript",
    "views": {
        "IdByTag": {
-           "map": "function(doc) {\n  if(doc.tag) {\n    emit(doc.tag, doc._id);\n  }\n}"
+           "map": "function(doc) {\n  if(doc._id) {\n    emit(doc._id, doc._id);\n  }\n}"
        }
    }
+}
+
+function(doc) {
+	if(doc._id) {
+		emit(doc._id, doc._id);
+	}
+}
+
+
+
+{
+   "_id": "_design/tag_bovines",
+   "_rev": "1-b44b9a01f4669793b15f1147d2038fd6",
+   "language": "javascript",
+   "views": {
+       "tag_bovines": {
+           "map": "function(doc) {\n\tif(doc._id) {\n\t\temit(doc._id, doc);\n\t}\n}"
+       }
+   }
+}
+
+function(doc) {
+	if(doc._id) {
+		emit(doc._id, doc);
+	}
+}
+
+
+
+
+
+
+function(doc) {
+	if(doc._id) {
+		emit(doc._id, {id: doc._id, rev:doc._rev});
+	}
 }
