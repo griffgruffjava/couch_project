@@ -1,0 +1,23 @@
+{
+   "_id": "_design/current_owner",
+   "_rev": "1-2212ea89478166d287445195f33650e1",
+   "language": "javascript",
+   "views": {
+       "current_owner": {
+           "map": "function(doc) {\n  if(doc.sales) {\n\tsize = doc.sales.length;\n        emit(doc.tag, doc.sales[size-1].buyer);\n  }\n  else {\n\temit(doc.tag, doc.originHerd);\n}\n\t\n}"
+       }
+   }
+}
+
+
+
+{
+   "_id": "_design/findIdByTag",
+   "_rev": "1-6aee12d5f0a92f4095b7772514ebb6e4",
+   "language": "javascript",
+   "views": {
+       "IdByTag": {
+           "map": "function(doc) {\n  if(doc.tag) {\n    emit(doc.tag, doc._id);\n  }\n}"
+       }
+   }
+}
